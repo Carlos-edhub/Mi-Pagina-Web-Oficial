@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tng_shops – Perfumes que enamoran</title>
+  <meta name="description" content="Tienda de perfumes originales y asesoría personalizada." />
+  <meta name="keywords" content="perfumes originales, fragancias, tienda online, asesoría perfumes, tng shops" />
+  <meta name="author" content="tng_shops" />
+  <meta property="og:title" content="tng_shops – Perfumes que enamoran" />
+  <meta property="og:description" content="Tienda de perfumes originales y asesoría personalizada." />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tng.css" />
+  <script defer src="tng.js"></script>
+</head>
+<body>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+  
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#home" class="logo" aria-label="tng_shops - inicio">tng_<span>shops</span></a>
+      <nav class="nav" role="navigation" aria-label="Navegación principal">
+        <a href="#tienda" class="nav-link">Tienda</a>
+        <a href="#nosotros" class="nav-link">Nosotros</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero" role="banner">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>Perfumes que <span>enamoran</span></h1>
+        <p>Fragancias originales con envío rápido y asesoría por WhatsApp.</p>
+        <div class="hero-cta">
+          <a href="#tienda" class="btn btn-primary" aria-label="Explorar nuestra tienda de perfumes">Explorar tienda</a>
+          <a href="#nosotros" class="btn btn-outline" aria-label="Conocer más sobre tng_shops">Conócenos</a>
+        </div>
+      </div>
+      <div class="hero-media" role="img" aria-label="Perfumes de lujo de tng_shops">
+          <img src="bannerTng_shops.png" alt="Colección de perfumes originales tng_shops" class="banner-img" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- BADGES -->
+  <section class="badges" aria-label="Ventajas de tng_shops">
+    <div class="container badges-grid">
+      <div class="badge" role="status" aria-label="Perfumes 100% originales">✅ 100% originales</div>
+      <div class="badge" role="status" aria-label="Envíos a todo el país">🚚 Envíos a todo el país</div>
+      <div class="badge" role="status" aria-label="Asesoría por WhatsApp">💬 Asesoría por WhatsApp</div>
+      <div class="badge" role="status" aria-label="Pago seguro">🔒 Pago seguro</div>
+    </div>
+  </section>
+
+  <!-- TIENDA -->
+  <main id="main-content">
+  <section id="tienda" class="shop" aria-labelledby="shop-title">
+    <div class="container">
+      <header class="shop-head">
+        <div>
+          <h2 id="shop-title">Tienda</h2>
+          <p>Explora nuestras fragancias más buscadas</p>
+        </div>
+        <div class="search-container">
+          <label for="search" class="sr-only">Buscar perfume</label>
+          <input id="search" type="search" placeholder="Buscar perfume..." aria-label="Buscar perfume" oninput="filterProducts(this.value)" />
+        </div>
+      </header>
+
+      <div id="grid" class="product-grid" role="list" aria-label="Lista de perfumes">
+        <!-- Cards de ejemplo (puedes duplicar/modificar) -->
+        <article class="card" data-name="Fakhar Men Black" role="listitem">
+          <div class="card-media">
+            <img src="lattafa_fakhar_man_eau_de_parfum_1.png" alt="Fakhar Men Black perfume bottle" loading="lazy" />
+          </div>
+          <h3>Fakhar Men Black</h3>
+          <p class="card-desc">Misterioso e intenso. Noche con carácter.</p>
+          <div class="card-foot">
+            <span class="price" aria-label="Precio 29.99 euros">29.99€</span>
+            <button class="btn btn-primary" onclick="order('Fakhar Men Black')" aria-label="Comprar Fakhar Men Black">Comprar</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Club de Nuit Iconic" role="listitem">
+          <div class="card-media">
+            <img src="club-de-nuit-blue-iconic___231205.png" alt="Club de Nuit Iconic perfume bottle" class="product-img" loading="lazy" />
+          </div>
+          <h3>Club de Nuit Iconic</h3>
+          <p class="card-desc">Audaz y poderoso. Presencia segura.</p>
+          <div class="card-foot">
+            <span class="price" aria-label="Precio 36.99 euros">36.99€</span>
+            <button class="btn btn-primary" onclick="order('Club de Nuit Iconic')" aria-label="Comprar Club de Nuit Iconic">Comprar</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Club de Nuit Sillage" role="listitem">
+          <div class="card-media">
+            <img src="ClubDeNuitSillage.png" alt="Club de Nuit Sillage perfume bottle" loading="lazy" />
+          </div>
+          <h3>Club de Nuit Sillage</h3>
+          <p class="card-desc">Elegancia fresca y magnética.</p>
+          <div class="card-foot">
+            <span class="price" aria-label="Precio 36.99 euros">36.99€</span>
+            <button class="btn btn-primary" onclick="order('Club de Nuit Sillage')" aria-label="Comprar Club de Nuit Sillage">Comprar</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Club de Nuit Sillage" role="listitem">
+          <div class="card-media">
+            <img src="clubDeNuit.png" alt="Club de Nuit intense man perfume bottle" loading="lazy" />
+          </div>
+          <h3>Club de Nuit Intense Man</h3>
+          <p class="card-desc">Elegancia fresca y magnética.</p>
+          <div class="card-foot">
+            <span class="price" aria-label="Precio 36.99 euros">36.99€</span>
+            <button class="btn btn-primary" onclick="order('Club de Nuit Sillage')" aria-label="Comprar Club de Nuit Sillage">Comprar</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="La Charmante" role="listitem">
+          <div class="card-media">
+            <img src="lacharmante.png" alt="La Charmante perfume bottle" loading="lazy" />
+          </div>
+          <h3>La Charmante</h3>
+          <p class="card-desc">Refinada, lujosa. Ocasiones especiales.</p>
+          <div class="card-foot">
+            <span class="price" aria-label="Precio 29.99 euros">29.99€</span>
+            <button class="btn btn-primary" onclick="order('La Charmante')" aria-label="Comprar La Charmante">Comprar</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Al Wisam" role="listitem">
+          <div class="card-media">
+            <img src="alWisam.png" alt="Al Wisam perfume bottle" loading="lazy" />
+          </div>
+          <h3>Al Wisam</h3>
+          <p class="card-desc">Versátil y fresco. Ideal diario.</p>
+          <div class="card-foot">
+            <span class="price" aria-label="Precio 29.99 euros">29.99€</span>
+            <button class="btn btn-primary" onclick="order('Al Wisam')" aria-label="Comprar Al Wisam">Comprar</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section id="nosotros" class="about" aria-labelledby="about-title">
+    <div class="container about-grid">
+      <div>
+        <h2 id="about-title">Sobre tng_shops</h2>
+        <p>Creemos que cada fragancia cuenta una historia. Somos una tienda transparente, honesta y que se preocupa por tí. Te asesoramos para encontrar tu aroma ideal.</p>
+        <ul class="bullets">
+          <li>Catálogo seleccionado</li>
+          <li>Entrega rápida con seguimiento</li>
+          <li>Atención personalizada</li>
+        </ul>
+      </div>
+      <div class="media-placeholder">
+        <img src="logo.png" alt="Logo tng_shops" class="product-img" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contact" aria-labelledby="contact-title">
+    <div class="container contact-inner">
+      <h2 id="contact-title">¿Hablamos?</h2>
+      <p>Resolvemos dudas, recomendamos perfumes y tomamos pedidos por WhatsApp.</p>
+      <div class="cta-row">
+        <a id="wa-link" class="btn btn-whatsapp" href="#" target="_blank" aria-label="Contactar por WhatsApp">WhatsApp</a>
+        <a class="btn btn-outline" href="mailto:carloscardenas.pv@gmail.com" aria-label="Enviar correo a carloscardenas.pv@gmail.com">carloscardenas.pv@gmail.com</a>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year"></span> tng_shops. Todos los derechos reservados.</p>
+      <nav class="footer-nav" aria-label="Navegación secundaria">
+        <a href="#">Envíos</a> · <a href="#">Devoluciones</a> · <a href="#">Términos</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
