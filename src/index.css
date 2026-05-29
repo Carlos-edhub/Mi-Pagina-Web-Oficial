@@ -2305,6 +2305,155 @@ body {
 }
 
 /* =================================================================
+   Collections Showcase
+   ================================================================= */
+.collections-showcase {
+  padding: 3rem 0;
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.collection-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition);
+}
+
+.collection-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: 0 4px 16px var(--shadow);
+}
+
+.collection-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.collection-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0 0 0.15rem;
+}
+
+.collection-desc {
+  font-size: 0.75rem;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.collection-count {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 600px) {
+  .collections-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* =================================================================
+   Newsletter
+   ================================================================= */
+.newsletter {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.newsletter-section {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.newsletter-bar {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border);
+  background: var(--surface-hover);
+}
+
+.newsletter-bar .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.newsletter-bar .newsletter-title,
+.newsletter-bar .newsletter-desc {
+  display: none;
+}
+
+.newsletter-bar .newsletter-form {
+  margin: 0;
+}
+
+.newsletter-bar .newsletter-input {
+  width: 240px;
+}
+
+.newsletter-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.newsletter-desc {
+  color: var(--text-secondary);
+  margin: 0 auto 1.25rem;
+  max-width: 480px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.newsletter-input {
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-family: inherit;
+  background: var(--bg);
+  color: var(--text);
+  width: 280px;
+  max-width: 100%;
+  transition: border-color var(--transition);
+}
+
+.newsletter-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.newsletter-btn {
+  white-space: nowrap;
+}
+
+.newsletter-success {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: #22c55e;
+  font-weight: 500;
+}
+
+/* =================================================================
    Product Detail — Notes Pyramid
    ================================================================= */
 .pyramid {
@@ -2526,6 +2675,183 @@ body {
 
 @media (max-width: 800px) {
   .detail-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* =================================================================
+   Blog — Rating bars (for review articles)
+   ================================================================= */
+.review-rating-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.review-rating-main {
+  text-align: center;
+  min-width: 100px;
+}
+
+.review-rating-big {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.review-rating-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.review-rating-bars {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.rating-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.rating-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  min-width: 80px;
+  color: var(--text-secondary);
+}
+
+.rating-track {
+  flex: 1;
+  height: 6px;
+  background: var(--surface-hover);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.rating-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #f97316);
+  border-radius: 3px;
+  transition: width 0.6s ease;
+}
+
+.rating-value {
+  font-size: 0.85rem;
+  font-weight: 600;
+  min-width: 35px;
+  text-align: right;
+  color: var(--text);
+}
+
+/* Review product card */
+.review-product-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  margin: 1rem 0 2rem;
+  transition: all var(--transition);
+}
+
+.review-product-card:hover {
+  border-color: var(--accent);
+  transform: translateX(4px);
+}
+
+.review-product-card img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  background: var(--surface-hover);
+}
+
+.review-product-card div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.review-product-badge {
+  font-size: 0.7rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.review-product-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.review-product-price {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.review-product-arrow {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  transition: transform var(--transition);
+}
+
+.review-product-card:hover .review-product-arrow {
+  transform: translateX(4px);
+  color: var(--accent);
+}
+
+.review-product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Blog filter buttons enhancement */
+.blog-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.blog-filter-btn {
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.blog-filter-btn:hover {
+  border-color: var(--border-hover);
+  color: var(--text);
+}
+
+.blog-filter-btn.active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
 }
 
 

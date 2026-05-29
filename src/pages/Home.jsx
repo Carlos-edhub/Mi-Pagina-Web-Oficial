@@ -19,8 +19,10 @@ import Testimonials from '../components/Testimonials';
 import BrandsSection from '../components/BrandsSection';
 import ProductGrid from '../components/ProductGrid';
 import FeaturedCarousel from '../components/FeaturedCarousel';
+import CollectionsShowcase from '../components/CollectionsShowcase';
 import About from '../components/About';
 import Contact from '../components/Contact';
+import Newsletter from '../components/Newsletter';
 import products from '../data/products';
 
 export default function Home() {
@@ -32,6 +34,7 @@ export default function Home() {
       <Badges />
       <Testimonials />
       <BrandsSection />
+      <CollectionsShowcase />
       <FeaturedCarousel products={products} />
       <section id="tienda" className="shop" aria-labelledby="shop-title">
         <div className="container">
@@ -45,6 +48,7 @@ export default function Home() {
         </div>
       </section>
       <About />
+      <Newsletter />
       <Contact />
     </main>
     </>

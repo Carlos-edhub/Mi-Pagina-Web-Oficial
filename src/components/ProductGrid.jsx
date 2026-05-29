@@ -2,13 +2,17 @@ import { useState, useMemo } from 'react';
 import ProductCard from './ProductCard';
 import ProductFilters from './ProductFilters';
 
-export default function ProductGrid({ products, searchQuery = '' }) {
+export default function ProductGrid({ products, searchQuery = '', collectionFilter, collectionName }) {
   const [activeCategory, setActiveCategory] = useState('Todas');
   const [selectedBrand, setSelectedBrand] = useState('');
   const [priceRange, setPriceRange] = useState(null);
 
   const filtered = useMemo(() => {
     let result = products;
+
+    if (collectionFilter) {
+      result = result.filter(collectionFilter);
+    }
 
     if (activeCategory !== 'Todas') {
       result = result.filter((p) => p.category === activeCategory);
@@ -34,7 +38,7 @@ export default function ProductGrid({ products, searchQuery = '' }) {
     }
 
     return result;
-  }, [products, activeCategory, selectedBrand, priceRange, searchQuery]);
+  }, [products, activeCategory, selectedBrand, priceRange, searchQuery, collectionFilter]);
 
   return (
     <>

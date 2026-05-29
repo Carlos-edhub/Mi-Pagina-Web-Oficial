@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Newsletter from './Newsletter';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -23,15 +24,16 @@ export default function Footer() {
             <Link to="/servicios" className="footer-link">Tarjeta regalo</Link>
             <Link to="/servicios" className="footer-link">Click & Collect</Link>
             <Link to="/fidelidad" className="footer-link">Programa de puntos</Link>
-            <Link to="/blog" className="footer-link">Blog</Link>
           </div>
           <div className="footer-col">
             <h4 className="footer-col-title">Ayuda</h4>
             <Link to="/nosotros" className="footer-link">Sobre nosotros</Link>
             <Link to="/contacto" className="footer-link">Contacto</Link>
             <Link to="/servicios" className="footer-link">Preguntas frecuentes</Link>
+            <Link to="/blog" className="footer-link">Blog</Link>
           </div>
         </div>
+        <Newsletter variant="bar" />
         <div className="footer-bottom">
           <p>© {year} tng_shops. Todos los derechos reservados.</p>
         </div>
