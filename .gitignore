@@ -1,0 +1,21 @@
+# Dependencias
+node_modules/
+
+# Build de producción
+dist/
+
+# Archivos locales
+.env
+.env.local
+*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Backups
+*.bak
+
+# Scripts de generación (usados una sola vez)
+*.py
+CATALOGO_TNG.txt

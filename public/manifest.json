@@ -1,0 +1,17 @@
+{
+  "name": "tng_shops – Perfumes que enamoran",
+  "short_name": "tng_shops",
+  "description": "Tienda de perfumes originales y asesoría personalizada.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0b12",
+  "theme_color": "#e11d48",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
