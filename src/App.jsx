@@ -1,5 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { lazy, Suspense, useEffect } from 'react';
 import { CartProvider } from './context/CartContext';
 import { ToastProvider } from './context/ToastContext';
 
@@ -19,6 +19,12 @@ const BlogPage = lazy(() => import('./pages/BlogPage'));
 const BlogArticlePage = lazy(() => import('./pages/BlogArticlePage'));
 const LoyaltyPage = lazy(() => import('./pages/LoyaltyPage'));
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+}
+
 const SuspenseWrapper = ({ children }) => (
   <Suspense fallback={<div className="page-loading" />}>{children}</Suspense>
 );
@@ -26,6 +32,7 @@ const SuspenseWrapper = ({ children }) => (
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <CartProvider>
         <ToastProvider>
           <PromotionalBar />
